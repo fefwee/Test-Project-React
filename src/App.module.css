@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: rgb(84, 102, 96);
+}
 
 .wrapper{
     width: 95%;

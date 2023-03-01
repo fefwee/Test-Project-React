@@ -17,7 +17,7 @@ export const App = () => {
         <main >
             <Main/>
             <Description/>
-        </main>
+         </main>
         </div>
          
     )
