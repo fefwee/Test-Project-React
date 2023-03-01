@@ -1,0 +1,7 @@
+.logoIcon{
+ max-width: 70px;
+}
+.header{
+    display: flex;
+    align-items: center;
+}
