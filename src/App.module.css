@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(84, 102, 96);
+    background-color: rgb(171, 204, 193);
 }
 
 .wrapper{
@@ -23,6 +23,9 @@ header{
 aside{
     grid-area: aside;
 }
-main{
+.wrapper__content{
     grid-area: main;
+    box-shadow: 1px 1px 3px rgb(78, 78, 78);
+    border-radius: 10px;
+    min-height:80vh;
 }
