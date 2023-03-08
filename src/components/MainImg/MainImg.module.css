@@ -1,0 +1,12 @@
+.back_img{
+    aspect-ratio: 1;
+    height: 100px;
+    background-color: rgb(147, 182, 212);
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 20px;
+    
+}
+.back_img img{
+    width: 100%;
+}

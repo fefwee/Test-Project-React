@@ -7,7 +7,7 @@ export const Aside = () =>{
         <div className={style.aside}>
             <nav>
                 <ul>
-                    <li><Link to="/">Main</Link></li>
+                    <li><Link to="/">Profile</Link></li>
                     <li><Link to="/dialog">Dialog</Link></li>
                     <li><Link to="/content">Content</Link></li>
                     <li><Link to="/news">News</Link></li>

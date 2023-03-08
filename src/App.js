@@ -1,9 +1,7 @@
 import { Header } from './components/Header/Header';
 import style from './App.module.css'
 import { Aside } from './components/Aside/Aside';
-import { Main } from './components/Main/Main';
-import { Dialog } from './components/Dialogs/Dialog';
-import {Routes,Route,Link} from 'react-router-dom'
+import { Routing } from './Routing/Routing';
 
 
 export const App = () => {
@@ -17,10 +15,7 @@ export const App = () => {
             <Aside/>
         </aside>
         <div className={style.wrapper__content}>
-           <Routes>
-            <Route path='/' element = {<Main/>}/>
-            <Route path='/dialog' element = {<Dialog/>}/>
-           </Routes>
+            <Routing/>
          </div>
         </div>
          
