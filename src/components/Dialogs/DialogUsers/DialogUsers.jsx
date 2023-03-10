@@ -4,7 +4,7 @@ export const  DialogUsers = (props) =>{
 
     return(
         <div>
-            <p>{props.name} {props.id} </p>
+            <p>{props.name} </p>
         </div>
     )
 }

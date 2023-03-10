@@ -4,7 +4,9 @@ import { Aside } from './components/Aside/Aside';
 import { Routing } from './Routing/Routing';
 
 
-export const App = () => {
+export const App = (props) => {
+    
+   
 
     return(
         <div className={style.wrapper}>
@@ -15,7 +17,7 @@ export const App = () => {
             <Aside/>
         </aside>
         <div className={style.wrapper__content}>
-            <Routing/>
+            <Routing posts  = {props.posts}/>
          </div>
         </div>
          

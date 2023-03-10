@@ -1,25 +1,29 @@
 import React from "react";
 import style from './Dialog.module.css'
-import { DialogMessages } from "./DialogMessages";
-import { DialogUsers } from "./DialogUsers";
+import { DialogMessages } from "./DialogMessage/DialogMessages";
+import { DialogUsers } from "./DialogUsers/DialogUsers";
 
-export const Dialog = () =>{
+export const Dialog = (props) =>{
+ 
+
+   
+    const messageData = props.name.map(message => <DialogMessages messages = {message.messages}/>)
+    const usersData = props.users.map(user => <DialogUsers name = {user.name}/> )
+
+
+
     return (
+
         <div className={style.dialog_users}>
             <div className={style.users}>
-                <div>
-                 <DialogUsers id = '1' name = 'Ivan'/>
-                 <DialogUsers name = 'Ivan'/>
-                 <DialogUsers name = 'Ivan'/>
-                 <DialogUsers name = 'Ivan'/>
-                </div>
-            </div>
-            <div className={style.dialogs}>
-            <DialogMessages messages = 'one messages'/>
-            <DialogMessages messages = 'one messages'/>
-            <DialogMessages messages = 'one messages'/>
-            <DialogMessages messages = 'one messages'/>
-            </div>
+             {usersData}
+
+           </div>
+           <div>
+            {messageData}
+           </div>
+
+           
         </div>
     )
 }
