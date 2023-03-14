@@ -4,12 +4,10 @@ import { MyPost } from "../MyPost/MyPost";
 import style from './Main.module.css'
 
 export const Profile = (props) =>{
-    
-  
      return (
         <div className={style.main}>
             <MainImg/>
-            <MyPost posts = {props.posts}/>
+            <MyPost post = {props.state.posts}/>
         </div>
      )
 }

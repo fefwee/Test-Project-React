@@ -5,10 +5,8 @@ import { DialogUsers } from "./DialogUsers/DialogUsers";
 
 export const Dialog = (props) =>{
  
-
-   
-    const messageData = props.name.map(message => <DialogMessages messages = {message.messages}/>)
-    const usersData = props.users.map(user => <DialogUsers name = {user.name}/> )
+    const messageData = props.state.message.map(message => <DialogMessages messages = {message.messages}/>)
+    const usersData = props.state.users.map(user => <DialogUsers name = {user.name}/> )
 
 
 
@@ -19,7 +17,7 @@ export const Dialog = (props) =>{
              {usersData}
 
            </div>
-           <div>
+           <div >
             {messageData}
            </div>
 

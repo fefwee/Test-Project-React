@@ -8,15 +8,11 @@ import {News} from '../components/News/News'
 
 
 export const Routing  = (props) =>{
-     
-    
-   
-
     return (
         <>
         <Routes>
-            <Route path='/' element = {<Profile posts = {props.posts}/>}/>
-           <Route path='/dialog' element = {<Dialog />}/>
+            <Route path='/' element = {<Profile state = {props.posts.profilePage}/>}/>
+           <Route path='/dialog' element = {<Dialog state = {props.posts.dialogPage}  />}/>
             <Route path='/content' element = {<Content/>}/>
             <Route path='/news' element = {<News/>}/>
            </Routes>

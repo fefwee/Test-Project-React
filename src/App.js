@@ -6,18 +6,16 @@ import { Routing } from './Routing/Routing';
 
 export const App = (props) => {
     
-   
-
     return(
         <div className={style.wrapper}>
         <header>
             <Header/>
         </header>
         <aside >
-            <Aside/>
+            <Aside friends = {props.state}/>
         </aside>
         <div className={style.wrapper__content}>
-            <Routing posts  = {props.posts}/>
+            <Routing  posts = {props.state} />
          </div>
         </div>
          

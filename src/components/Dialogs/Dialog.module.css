@@ -1,6 +1,7 @@
 .dialog_users{
     display: grid;
     grid-template-columns: 2fr 10fr;
+    align-items: center;
 }
 .users,.dialogs{
 padding:10px;
