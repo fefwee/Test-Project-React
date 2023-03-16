@@ -1,3 +1,4 @@
+import { renderEntireThree } from "../../Rerender";
 
 
   export const state = {
@@ -31,5 +32,16 @@
         {name:'Ivan'},
 
       ]
-    }
+    } 
   }
+
+  export const addPost = (postMessage) => {
+    const newPost = {
+      id:5,
+      message:postMessage
+    }
+    state.profilePage.posts.push(newPost);
+    renderEntireThree(state)
+
+  }
+

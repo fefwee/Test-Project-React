@@ -15,7 +15,7 @@ export const App = (props) => {
             <Aside friends = {props.state}/>
         </aside>
         <div className={style.wrapper__content}>
-            <Routing  posts = {props.state} />
+            <Routing  posts = {props.state} addPost = {props.addPost} />
          </div>
         </div>
          

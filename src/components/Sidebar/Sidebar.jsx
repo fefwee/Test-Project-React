@@ -1,6 +1,5 @@
 import React from "react";
 import { SidebarPost } from "./SidebarPost";
-import style from './Sidebar.module.css'
 
 
 export const Sidebar = (props) =>{
@@ -10,7 +9,7 @@ export const Sidebar = (props) =>{
     return (
         <div>
             <h1>Friends</h1>
-            <div className={style.friends}>{friendsPost}</div>
+            <div style = {{display:"flex"}}>{friendsPost}</div>
 
 
         </div>

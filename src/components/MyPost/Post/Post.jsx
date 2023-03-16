@@ -7,8 +7,7 @@ export const Post = (props) =>{
 
     return(
         <div>
-            <input type="text" />
-            <button>Click</button>
+           <p>{props.message}</p>
         </div>
     )
 }

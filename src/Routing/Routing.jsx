@@ -5,13 +5,14 @@ import {Profile } from "../components/Profile/Profile";
 import {Dialog} from '../components/Dialogs/Dialog'
 import {Content} from '../components/Content/Content'
 import {News} from '../components/News/News'
+import { addPost } from "../components/State/State";
 
 
 export const Routing  = (props) =>{
     return (
         <>
         <Routes>
-            <Route path='/' element = {<Profile state = {props.posts.profilePage}/>}/>
+            <Route path='/' element = {<Profile state = {props.posts.profilePage} addPost = {props.addPost}/>}/>
            <Route path='/dialog' element = {<Dialog state = {props.posts.dialogPage}  />}/>
             <Route path='/content' element = {<Content/>}/>
             <Route path='/news' element = {<News/>}/>
