@@ -8,8 +8,8 @@ import { renderEntireThree } from "../../Rerender";
         {id:2,message:'second'},
         {id:3,message:'three'},
         {id:4,message:'four'},
-        {id:5,message:'five'},
-      ]
+        {id:5,message:'five'}],
+        newPostText: 'new!!'
     },
       dialogPage:{
       message: [
@@ -35,6 +35,7 @@ import { renderEntireThree } from "../../Rerender";
     } 
   }
 
+  window.state = state;
   export const addPost = (postMessage) => {
     const newPost = {
       id:5,
@@ -42,6 +43,12 @@ import { renderEntireThree } from "../../Rerender";
     }
     state.profilePage.posts.push(newPost);
     renderEntireThree(state)
-
   }
+
+  export const updatePostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    renderEntireThree(state)
+  }
+
+  
 

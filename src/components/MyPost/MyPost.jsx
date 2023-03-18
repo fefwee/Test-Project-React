@@ -12,16 +12,22 @@ export const MyPost = (props) =>{
         props.addPost(text)
 
     }
-   
+
+   const newPostText = () =>{
+    let text = newPostElement.current.value;
+    props.updatePostText(text)
+   }
 
    
 
     return(
         <div>
             <input type="text" 
+            value={props.newPostText}
             ref={newPostElement} 
+            onChange = {newPostText}
             />
-            <button onClick={addPost}>Click</button>
+            <button onClick={addPost} >Click</button>
             {postData}
         </div>
     )

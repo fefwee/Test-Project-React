@@ -12,7 +12,11 @@ export const Routing  = (props) =>{
     return (
         <>
         <Routes>
-            <Route path='/' element = {<Profile state = {props.posts.profilePage} addPost = {props.addPost}/>}/>
+            <Route path='/' element = {<Profile state = {props.posts.profilePage} 
+                                                addPost = {props.addPost} 
+                                                newPostText = {props.posts.profilePage}
+                                                updatePostText = {props.updatePostText}
+                                                />}/>
            <Route path='/dialog' element = {<Dialog state = {props.posts.dialogPage}  />}/>
             <Route path='/content' element = {<Content/>}/>
             <Route path='/news' element = {<News/>}/>

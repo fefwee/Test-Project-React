@@ -7,7 +7,11 @@ export const Profile = (props) =>{
      return (
         <div className={style.main}>
             <MainImg/>
-            <MyPost post = {props.state.posts} addPost = {props.addPost}/>
+            <MyPost post = {props.state.posts} 
+                    addPost = {props.addPost} 
+                    newPostText = {props.newPostText.newPostText}
+                    updatePostText = {props.updatePostText}
+                    />
         </div>
      )
 }
