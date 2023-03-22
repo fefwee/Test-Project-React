@@ -6,7 +6,8 @@ import { DialogUsers } from "./DialogUsers/DialogUsers";
 
 export const Dialog = (props) =>{
  
-    const messageData = props.state.message.map(message => <DialogMessages messages = {message.messages}/>)
+    const messageData = props.state.message.map(message => <DialogMessages messages = {message.messages} 
+         />)
     const usersData = props.state.users.map(user => <DialogUsers name = {user.name}/> )
 
 
@@ -21,7 +22,10 @@ export const Dialog = (props) =>{
             {messageData}
            </div> 
         </div>
-        <ChatMessages/>
+        <ChatMessages messageUsers = {props.state.messageUsers} 
+                      changeTextMessages = {props.changeTextMessages} 
+                      addMessage = {props.addMessage}
+                      />
         </>
     )
 }
