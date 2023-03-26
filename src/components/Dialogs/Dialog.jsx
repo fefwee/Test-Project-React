@@ -23,8 +23,7 @@ export const Dialog = (props) =>{
            </div> 
         </div>
         <ChatMessages messageUsers = {props.state.messageUsers} 
-                      changeTextMessages = {props.changeTextMessages} 
-                      addMessage = {props.addMessage}
+                     dispatch = {props.dispatch}
                       />
         </>
     )

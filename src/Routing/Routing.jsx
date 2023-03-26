@@ -5,7 +5,6 @@ import {Profile } from "../components/Profile/Profile";
 import {Dialog} from '../components/Dialogs/Dialog'
 import {Content} from '../components/Content/Content'
 import {News} from '../components/News/News'
-import { addPost } from "../components/State/State";
 
 
 export const Routing  = (props) =>{
@@ -13,13 +12,11 @@ export const Routing  = (props) =>{
         <>
         <Routes>
             <Route path='/' element = {<Profile state = {props.posts.profilePage} 
-                                                addPost = {props.addPost} 
                                                 newPostText = {props.posts.profilePage}
-                                                updatePostText = {props.updatePostText}
+                                                dispatch = {props.dispatch}
                                                 />}/>
            <Route path='/dialog' element = {<Dialog state = {props.posts.dialogPage} 
-                                                    changeTextMessages = {props.changeTextMessages}
-                                                    addMessage = {props.addMessage}
+                                                    dispatch = {props.dispatch}
                                                     />}/>
             <Route path='/content' element = {<Content/>}/>
             <Route path='/news' element = {<News/>}/>

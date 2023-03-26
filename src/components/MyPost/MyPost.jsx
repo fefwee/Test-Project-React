@@ -1,6 +1,7 @@
 import React, { createRef, useState } from "react";
 import { Post } from "./Post/Post";
 import style from './MyPost.module.css'
+import { addPostActionCreator,newPostTextActionCreator } from "../State/State";
 
 export const MyPost = (props) =>{
 
@@ -8,21 +9,18 @@ export const MyPost = (props) =>{
 
     const newPostElement = createRef();
     const addPost = () =>{
-        let text = newPostElement.current.value;
-        props.addPost(text)
+        props.dispatch(addPostActionCreator())
 
     }
 
    const newPostText = () =>{
-    let text = newPostElement.current.value;
-    props.updatePostText(text)
+    let newPostText = newPostElement.current.value;
+    props.dispatch(newPostTextActionCreator(newPostText))
    }
-
-   
 
     return(
         <div>
-            <input type="text" 
+            <input type="texAt" 
             value={props.newPostText}
             ref={newPostElement} 
             onChange = {newPostText}

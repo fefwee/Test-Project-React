@@ -1,18 +1,18 @@
 import React, { createRef } from "react";
 import style from './ChatMessages.module.css'
+import { addMessageActionCreator, changeTextMessageActionCreator} from "../../State/State";
 
 export const ChatMessages = (props) =>{
 
     const textElement = createRef();
 
     const changeChatMessages = () =>{
-        const text = textElement.current.value;
-        props.changeTextMessages(text)
+        let text = textElement.current.value;
+        props.dispatch(changeTextMessageActionCreator(text))
     }
 
     const createMessage = () =>{
-        let textMessage = textElement.current.value;
-        props.addMessage(textMessage)
+        props.dispatch(addMessageActionCreator())
 
     }
     return (
