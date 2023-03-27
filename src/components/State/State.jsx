@@ -1,30 +1,7 @@
-export const CHANGE_TEXT_MESSAGE = 'CHANGE-TEXT-MESSAGE';
-export const ADD_MESSAGE = 'ADD-MESSAGE';
-export const ADD_POST = 'ADD-POST';
-export const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
+import { dialogReducer } from "../../reducer/dialogReducer";
+import { profileReducer } from "../../reducer/profileReducer";
+import { sideBarFriendsReducer } from "../../reducer/sideBarFriends";
 
-export const addPostActionCreator = () =>{
-  return {
-    type:ADD_POST,
-  }
-}
-export const newPostTextActionCreator = (text) =>{
-   return {
-    type:UPDATE_POST_TEXT,
-    newPostText:text
-   }
-}
-export const  addMessageActionCreator = () =>{
-   return {
-    type:ADD_MESSAGE
-   }
-}
-export const changeTextMessageActionCreator = (text) =>{
-  return {
-    type:CHANGE_TEXT_MESSAGE,
-    messageUsers:text
-  }
-}
 
 
 
@@ -72,32 +49,9 @@ getState(){
   callSubscriber(){
   },
   dispatch(action){
-    if(action.type === ADD_POST){
-      let newPost = {
-        id:5,
-        message:this.state.profilePage.newPostText
-      }
-      this.state.profilePage.posts.push(newPost);
-      this.state.profilePage.newPostText = '';
-      this.callSubscriber()
-    }
-     else if(action.type === UPDATE_POST_TEXT){
-      this.state.profilePage.newPostText = action.newPostText;
-      this.callSubscriber()
-    }
-    else if(action.type === CHANGE_TEXT_MESSAGE){
-      this.state.dialogPage.messageUsers = action.messageUsers;
-    this.callSubscriber()
-    }
-    else if(action.type === ADD_MESSAGE){
-      const messageUser = {
-        messages:this.state.dialogPage.messageUsers
-      }
-      this.state.dialogPage.message.push(messageUser)
-      this.state.dialogPage.messageUsers = ''
-      this.callSubscriber()
-    }
-  
+   this.state.profilePage = profileReducer(this.state.profilePage,action)
+   this.state.dialogPage = dialogReducer(this.state.dialogPage,action)
+  this.callSubscriber(this.state)
   }
 }
 window.store = store

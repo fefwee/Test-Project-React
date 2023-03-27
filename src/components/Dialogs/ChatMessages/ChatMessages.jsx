@@ -1,5 +1,5 @@
 import style from './ChatMessages.module.css'
-import { addMessageActionCreator, changeTextMessageActionCreator} from "../../State/State";
+import { changeTextMessageActionCreator,addMessageActionCreator } from '../../../reducer/dialogReducer';
 
 export const ChatMessages = (props) =>{
 
@@ -7,7 +7,8 @@ export const ChatMessages = (props) =>{
     const changeChatMessages = (e) =>{
         let text = e.target.value;
         console.log(e.target.value);
-        props.dispatch(changeTextMessageActionCreator(text))
+        props.dispatch(changeTextMessageActionCreator(text)) 
+   
     }
 
     const createMessage = () =>{

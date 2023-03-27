@@ -1,7 +1,6 @@
 import { Post } from "./Post/Post";
 import style from './MyPost.module.css'
-import { addPostActionCreator,newPostTextActionCreator } from "../State/State";
-
+import { addPostActionCreator,newPostTextActionCreator } from "../../reducer/profileReducer";
 export const MyPost = (props) =>{
 
     const postData = props.post.map(p => <Post message = {p.message}/>)
@@ -27,3 +26,4 @@ export const MyPost = (props) =>{
         </div>
     )
 }
+    
