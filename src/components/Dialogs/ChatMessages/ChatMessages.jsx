@@ -1,13 +1,12 @@
-import React, { createRef } from "react";
 import style from './ChatMessages.module.css'
 import { addMessageActionCreator, changeTextMessageActionCreator} from "../../State/State";
 
 export const ChatMessages = (props) =>{
 
-    const textElement = createRef();
 
-    const changeChatMessages = () =>{
-        let text = textElement.current.value;
+    const changeChatMessages = (e) =>{
+        let text = e.target.value;
+        console.log(e.target.value);
         props.dispatch(changeTextMessageActionCreator(text))
     }
 
@@ -18,7 +17,6 @@ export const ChatMessages = (props) =>{
     return (
         <div>
             <input type="text" placeholder="Введите сообщение.." 
-            ref={textElement} 
             className={style.input}
             value = {props.messageUsers}
             onChange = {changeChatMessages}
