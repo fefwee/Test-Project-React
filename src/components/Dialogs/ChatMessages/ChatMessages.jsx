@@ -4,7 +4,7 @@ import { changeTextMessageActionCreator,addMessageActionCreator } from '../../..
 export const ChatMessages = (props) =>{
 
 
-    const changeChatMessages = (e) =>{
+   /*  const changeChatMessages = (e) =>{
         let text = e.target.value;
         console.log(e.target.value);
         props.dispatch(changeTextMessageActionCreator(text)) 
@@ -13,16 +13,14 @@ export const ChatMessages = (props) =>{
 
     const createMessage = () =>{
         props.dispatch(addMessageActionCreator())
-
-    }
+ */
+    
     return (
         <div>
             <input type="text" placeholder="Введите сообщение.." 
             className={style.input}
-            value = {props.messageUsers}
-            onChange = {changeChatMessages}
             />
-            <button className={style.button} onClick = {createMessage}>Отправить</button>
+            <button className={style.button}>Отправить</button>
         </div>
     )
 }

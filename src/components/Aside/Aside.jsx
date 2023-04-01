@@ -12,7 +12,7 @@ export const Aside = (props) =>{
                     <li><Link to="/dialog">Dialog</Link></li>
                     <li><Link to="/content">Content</Link></li>
                     <li><Link to="/news">News</Link></li>
-                    <Sidebar friends = {props.friends.sideBarFriends.sideBar}/>
+                    <Sidebar/>
                 </ul>
             </nav>
         </div>

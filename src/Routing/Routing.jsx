@@ -11,13 +11,8 @@ export const Routing  = (props) =>{
     return (
         <>
         <Routes>
-            <Route path='/' element = {<Profile state = {props.posts.profilePage} 
-                                                newPostText = {props.posts.profilePage}
-                                                dispatch = {props.dispatch}
-                                                />}/>
-           <Route path='/dialog' element = {<Dialog state = {props.posts.dialogPage} 
-                                                    dispatch = {props.dispatch}
-                                                    />}/>
+            <Route path='/' element = {<Profile/>}/>
+           <Route path='/dialog' element = {<Dialog />}/>
             <Route path='/content' element = {<Content/>}/>
             <Route path='/news' element = {<News/>}/>
            </Routes>

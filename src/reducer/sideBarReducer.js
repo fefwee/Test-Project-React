@@ -1,8 +1,8 @@
-
 /* 
+ 
 export const sideBarFriendsReducer = (state,action)  =>{
 
-    switch (key) {
+    switch () {
         case value:
             
             break;
@@ -10,5 +10,5 @@ export const sideBarFriendsReducer = (state,action)  =>{
         default:
             break;
     }
-}
- */
+} */
+ 

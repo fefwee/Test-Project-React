@@ -2,7 +2,25 @@ export const CHANGE_TEXT_MESSAGE = 'CHANGE-TEXT-MESSAGE';
 export const ADD_MESSAGE = 'ADD-MESSAGE';
 
 
-export const dialogReducer = (state,action) => {
+
+const initialState = {
+  dialogPage:{
+  message: [
+    {id:1,messages:'one'},
+    {id:2,messages:'second'},
+    {id:3,messages:'three'},
+    {id:4,messages:'four'},
+          ],
+  users: [
+    {name:'Anna'},
+    {name:'Ivan'},
+    {name:'Row'},
+    {name:'Sele'},
+  ],
+  messageUsers:'well',
+}}
+
+export const dialogReducer = (state = initialState,action) => {
     switch (action.type) {
         case CHANGE_TEXT_MESSAGE:
             state.messageUsers = action.messageUsers;

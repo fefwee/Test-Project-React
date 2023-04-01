@@ -1,6 +1,5 @@
 import { dialogReducer } from "../../reducer/dialogReducer";
 import { profileReducer } from "../../reducer/profileReducer";
-import { sideBarFriendsReducer } from "../../reducer/sideBarFriends";
 
 
 

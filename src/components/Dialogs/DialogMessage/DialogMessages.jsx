@@ -5,7 +5,7 @@ export const  DialogMessages = (props) =>{
 
     return(
         <div>
-                <p><img src={messageIcon} alt="" style={{width:'50px',verticalAlign:'middle'}}/>{props.messages}</p>
+                <p><img src={messageIcon} alt="" style={{width:'50px',verticalAlign:'middle'}}/>Messages</p>
         </div>
     )
 }

@@ -5,7 +5,7 @@ export const  DialogUsers = (props) =>{
 
     return(
         <div>
-            <p><img src={iconUser} alt=""  style={{width:'50px',verticalAlign:'middle'}}/>{props.name} </p>
+            <p><img src={iconUser} alt=""  style={{width:'50px',verticalAlign:'middle'}}/>Users </p>
         </div>
     )
 }

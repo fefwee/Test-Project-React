@@ -2,19 +2,18 @@ import React from "react";
 import ReactDOM  from "react-dom";
 import { App } from "./App";
 import { BrowserRouter } from "react-router-dom";
-import { store } from "./components/State/State";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
 
-const renderEntireThree = () =>{
     ReactDOM.render(
+        <Provider store = {store}>
         <BrowserRouter>
-         <App state = {store.getState()}  dispatch = {store.dispatch.bind(store)} 
-                              />
-         </BrowserRouter>,
+         <App/>
+         </BrowserRouter>
+         </Provider>,
         document.getElementById('root')
     );
-}
 
 
-renderEntireThree()
-store.subscribe(renderEntireThree)
+
 

@@ -3,14 +3,14 @@ import { MainImg } from "../MainImg/MainImg";
 import { MyPost } from "../MyPost/MyPost";
 import style from './Main.module.css'
 
-export const Profile = (props) =>{
+export const Profile = () =>{
+
+
+   
      return (
         <div className={style.main}>
             <MainImg/>
-            <MyPost post = {props.state.posts} 
-                    newPostText = {props.newPostText.newPostText}
-                    dispatch = {props.dispatch}
-                    />
+            <MyPost/>
         </div>
      )
 }

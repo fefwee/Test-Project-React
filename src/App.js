@@ -12,12 +12,10 @@ export const App = (props) => {
             <Header/>
         </header>
         <aside >
-            <Aside friends = {props.state}/>
+            <Aside/>
         </aside>
         <div className={style.wrapper__content}>
-            <Routing  posts = {props.state}
-             dispatch= {props. dispatch}
-            />
+            <Routing/>
          </div>
         </div>
          

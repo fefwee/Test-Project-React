@@ -1,28 +1,28 @@
 import { Post } from "./Post/Post";
 import style from './MyPost.module.css'
 import { addPostActionCreator,newPostTextActionCreator } from "../../reducer/profileReducer";
+import { useDispatch } from "react-redux";
+import { setFirstValue } from "../../redux/Features/profilePage/profileSlice";
+
+
 export const MyPost = (props) =>{
 
-    const postData = props.post.map(p => <Post message = {p.message}/>)
+    const dispatch = useDispatch()
 
-    const addPost = () =>{
-        props.dispatch(addPostActionCreator())
 
-    }
 
    const newPostText = (e) =>{
     let newPostText = e.target.value;
-    props.dispatch(newPostTextActionCreator(newPostText))
+    dispatch(setFirstValue(newPostText))
    }
 
     return(
         <div>
-            <input type="texAt" 
-            value={props.newPostText}
+            <input type="text" 
             onChange = {newPostText}
             />
-            <button onClick={addPost} >Click</button>
-            {postData}
+            <button>Click</button>
+            <Post/>
         </div>
     )
 }
