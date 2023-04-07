@@ -1,10 +1,10 @@
 import React from "react";
 import imgPost from '../Dialogs/DialogUsers/user.png'
 
-export const SidebarPost = (props) =>{
+export const SidebarPost = ({users}) =>{
     return (
         <div>
-            <p><img src={imgPost} alt="" style={{width:'50px'}}/>{props.friends}</p>
+            <p><img src={imgPost} alt="" style={{width:'50px'}}/>{users}</p>
         </div>
     )
 }

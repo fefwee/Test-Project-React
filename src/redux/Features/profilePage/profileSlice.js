@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    newPostText: ''
+    profilePage: []
 }
 
 
@@ -11,12 +11,19 @@ export const profileSlice = createSlice({
     reducers:{
         setFirstValue:(state,action)=>{
             state.newPostText = action.payload
+        },
+        addPost: (state,action) => {
+            const post = {
+                id:1,
+                message:action.payload
+            }
+            state.profilePage.push(post)
         }
     }
 
 })
 
 
-export const {setFirstValue} = profileSlice.actions;
+export const {setFirstValue,addPost} = profileSlice.actions;
 export default profileSlice.reducer
 
