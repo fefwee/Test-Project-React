@@ -1,5 +1,4 @@
 import React from "react";
-import { ChatMessages } from "./ChatMessages/ChatMessages";
 import style from './Dialog.module.css'
 import { DialogMessages } from "./DialogMessage/DialogMessages";
 import { DialogUsers } from "./DialogUsers/DialogUsers";
@@ -18,7 +17,6 @@ export const Dialog = (props) =>{
            <DialogMessages/>
            </div> 
         </div>
-        <ChatMessages/>
 
         </>
     )

@@ -10,7 +10,7 @@ export const Sidebar = () =>{
    
     return (
         <div>
-            <h1>Friends</h1>
+            <p>Friends</p>
             <div style = {{display:"flex"}}>{user}</div>
 
 

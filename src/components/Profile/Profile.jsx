@@ -12,7 +12,6 @@ export const Profile = () =>{
         <div className={style.main}>
             <MainImg/>
             <MyPost/>
-            <Post/>
         </div>
      )
 }

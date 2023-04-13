@@ -1,9 +1,5 @@
 .dialog_users{
     display: grid;
     grid-template-columns: 2fr 10fr;
-    align-items: center;
     padding:10px;
 }
-/* .users,.dialogs{
-padding:10px;
-} */

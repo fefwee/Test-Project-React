@@ -1,4 +1,5 @@
 import style from './ChatMessages.module.css'
+import messageIcon from '../ChatMessages/user.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { addTextMessage } from '../../../redux/Features/dialogPage/dialogPageSlice';
@@ -24,7 +25,7 @@ export const ChatMessages = () => {
             className={style.input}
             onChange={e=>setMessage(e.target.value)}
             />
-            <button className={style.button} onClick={addNewTextMessage}>Отправить</button>
+            <button className={style.button} onClick={()=> addNewTextMessage()}>Отправить</button>
             <div>{itemText}</div>
         </div>
     )

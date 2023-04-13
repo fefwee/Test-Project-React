@@ -1,5 +1,5 @@
 import React from "react";
-import iconUser from '../DialogUsers/user.png'
+import iconUser from '../ChatMessages/user.png'
 
 export const  DialogUsers = (props) =>{
 

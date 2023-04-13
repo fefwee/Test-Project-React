@@ -6,7 +6,7 @@ const initialState = {
 }
 
 export const dialogPage = createSlice({
-    name:'dialogPage',
+    name:'dialogpage',
     initialState,
     reducers:{
         addTextMessage: (state,action) => {

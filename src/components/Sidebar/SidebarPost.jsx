@@ -1,5 +1,5 @@
 import React from "react";
-import imgPost from '../Dialogs/DialogUsers/user.png'
+import imgPost from '../Dialogs/ChatMessages/user.png'
 
 export const SidebarPost = ({users}) =>{
     return (

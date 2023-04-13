@@ -6,7 +6,7 @@ export const News = () =>{
 
     return(
        <div>
-        <h1>News</h1>
+        <h1>New</h1>
        </div>
     )
 }
