@@ -7,13 +7,13 @@ import { Users } from '../components/Users/Users'
 import { News } from '../components/News/News'
 
 
-export const Routing = (props) => {
+export const Routing = () => {
     return (
         <>
             <Routes>
                 <Route path='/' element={<Profile />} />
                 <Route path='/dialog' element={<Dialog />} />
-                <Route path='/users' element={<Users />} />
+                <Route path='/users' element={<Users/>} />
                 <Route path='/news' element={<News />} />
             </Routes>
         </>
