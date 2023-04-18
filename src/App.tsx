@@ -4,7 +4,7 @@ import { Aside } from './components/Aside/Aside';
 import { Routing } from './Routing/Routing';
 
 
-export const App = (props) => {
+export const App = () => {
     
     return(
         <div className={style.wrapper}>

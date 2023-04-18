@@ -3,7 +3,7 @@ import style from './Aside.module.css'
 import {Link } from "react-router-dom";
 import { Sidebar } from "../Sidebar/Sidebar";
 
-export const Aside = (props) =>{
+export const Aside = () =>{
      return (
         <div className={style.aside}>
             <nav>
