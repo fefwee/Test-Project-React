@@ -1,6 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice,PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+
+type messageProfile = {
+    message:string
+}
+type messageStateProfile = {
+    profilePage:messageProfile[]
+}
+const initialState:messageStateProfile = {
     profilePage: []
 }
 
@@ -9,7 +16,7 @@ export const profileSlice = createSlice({
     name:'profileSlice',
     initialState,
     reducers:{
-        addPost: (state,action) => {
+        addPost: (state,action:PayloadAction<string>) => {
             const post = {
                 id:1,
                 message:action.payload
@@ -21,6 +28,6 @@ export const profileSlice = createSlice({
 })
 
 
-export const {setFirstValue,addPost} = profileSlice.actions;
+export const {addPost} = profileSlice.actions;
 export default profileSlice.reducer
 

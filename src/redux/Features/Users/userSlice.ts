@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice,PayloadAction } from "@reduxjs/toolkit"
 
 
 
@@ -11,6 +11,8 @@ const initialState = {
     
     ]
 }
+
+
 
 export const userSlice = createSlice({
     name:'users',
@@ -31,13 +33,11 @@ export const userSlice = createSlice({
        })
       }
         },
-        setUsers: () => {
-
-        }
+     
 
     }
 
 )
 
-export const {follow,unfollow,setUsers} = userSlice.actions
+export const {follow,unfollow} = userSlice.actions
 export default userSlice.reducer

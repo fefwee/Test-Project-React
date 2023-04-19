@@ -6,7 +6,7 @@ import userSlice from './Features/Users/userSlice';
 
 
 
-export const store = configureStore({
+const store = configureStore({
     reducer:{
         profilePage:profileSlice,
         dialogPage:dialogPageSlice,
@@ -15,5 +15,9 @@ export const store = configureStore({
     },
     devTools:true
 });
+
+export default store;
+
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch;
     
-    window.store = store;

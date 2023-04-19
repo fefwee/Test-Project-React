@@ -1,7 +1,14 @@
 import { useDispatch } from "react-redux"
 import { follow,unfollow } from "../../redux/Features/Users/userSlice"
 
-export const UserItem = ({id,name,status,followed}) => {
+
+interface UserItemProps {
+    id:number
+    name:string
+    status:string
+    followed:boolean
+}
+export const UserItem:React.FunctionComponent<UserItemProps> = ({id,name,status,followed}) => {
 
     const dispatch = useDispatch()
 

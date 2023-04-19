@@ -1,21 +1,14 @@
 import IconChat from '../ChatMessages/user.png'
 
-interface User {
-    users:{
-        id:number,
-        name:string,
-        status:string,
-        followed:boolean,
-        location:{
-            country:string,
-            city:string
-        }
-    }
+
+interface ChatItem {
+    text:string
 }
 
 
-export const ChatItemMessage = (users: User) =>{
 
+export const ChatItemMessage:React.FunctionComponent<ChatItem> = ({text}) =>{
+    
     return(
         <div>
            <p><img src={IconChat} style={{width:'50px',verticalAlign:'middle'}}/>{text}</p> 

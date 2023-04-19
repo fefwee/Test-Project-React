@@ -1,7 +1,9 @@
 import style from './Post.module.css'
 
-
-export const Post = ({message}) =>{
+interface PostMessage {
+    message:string
+}
+export const Post:React.FunctionComponent<PostMessage> = ({message}) =>{
 
   
 

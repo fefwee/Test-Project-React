@@ -1,7 +1,7 @@
 import React from "react";
 import iconUser from '../ChatMessages/user.png'
 
-export const  DialogUsers = (props) =>{
+export const  DialogUsers = () =>{
 
     return(
         <div>

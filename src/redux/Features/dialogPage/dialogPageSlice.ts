@@ -11,7 +11,6 @@ type messageState = {
 const initialState:messageState = {
   messagePage:[]
 }
-
 export const dialogPage = createSlice({
     name:'dialogpage',
     initialState,

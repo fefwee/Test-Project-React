@@ -2,7 +2,7 @@ import React from "react";
 import { ChatMessages } from "../ChatMessages/ChatMessages";
 
 
-export const DialogMessages = (props) => {
+export const DialogMessages = () => {
 
     return (
         <div>

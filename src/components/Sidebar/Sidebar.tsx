@@ -1,11 +1,11 @@
 import React from "react";
 import { SidebarPost } from "./SidebarPost";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../hook/hook";
 
 
 export const Sidebar = () =>{
 
-    const users = useSelector(state => state.sidebar.users)
+    const users = useAppSelector(state => state.sidebar.users)
     const user = users.map(u=><SidebarPost users = {u.name}/>)
    
     return (

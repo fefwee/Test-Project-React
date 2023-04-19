@@ -1,13 +1,13 @@
 import { Post } from "./Post/Post";
 import style from './MyPost.module.css'
-import { useDispatch, useSelector } from "react-redux";
+import { useAppDispatch,useAppSelector } from "../hook/hook";
 import { addPost} from "../../redux/Features/profilePage/profileSlice";
 import { useState } from "react";
 
 
 export const MyPost = () =>{
 
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     const [post,setPost] = useState('')
 
@@ -15,7 +15,7 @@ export const MyPost = () =>{
         dispatch(addPost(post))
     }
   
-    const messagePost = useSelector(state => state.profilePage.profilePage)
+    const messagePost = useAppSelector(state => state.profilePage.profilePage)
     const message = messagePost.map(m=><Post message = {m.message}/>)
 
     return(

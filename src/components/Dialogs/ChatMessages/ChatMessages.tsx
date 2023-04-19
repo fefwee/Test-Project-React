@@ -1,13 +1,13 @@
 import style from './ChatMessages.module.css'
 import messageIcon from '../ChatMessages/user.png'
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector,useAppDispatch } from '../../hook/hook';
 import { useState } from 'react';
 import { addTextMessage } from '../../../redux/Features/dialogPage/dialogPageSlice';
 import { ChatItemMessage } from './ChatItemMessage';
 
 export const ChatMessages = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
    const [message,setMessage] = useState('')
 
@@ -15,7 +15,7 @@ export const ChatMessages = () => {
     dispatch(addTextMessage(message))
    }
 
-   const text = useSelector(state => state.dialogPage.dialogPage)
+   const text = useAppSelector(state => state.dialogPage.messagePage)
    const itemText = text.map(item => <ChatItemMessage text = {item.message}/>)
 
     return (
