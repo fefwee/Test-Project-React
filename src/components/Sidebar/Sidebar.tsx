@@ -3,7 +3,7 @@ import { SidebarPost } from "./SidebarPost";
 import { useAppSelector } from "../hook/hook";
 
 
-export const Sidebar = () =>{
+export const Sidebar:React.FC = () =>{
 
     const users = useAppSelector(state => state.sidebar.users)
     const user = users.map(u=><SidebarPost users = {u.name}/>)

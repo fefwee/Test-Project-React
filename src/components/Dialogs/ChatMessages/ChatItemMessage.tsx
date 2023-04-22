@@ -7,7 +7,7 @@ interface ChatItem {
 
 
 
-export const ChatItemMessage:React.FunctionComponent<ChatItem> = ({text}) =>{
+export const ChatItemMessage:React.FC<ChatItem> = ({text}) =>{
     
     return(
         <div>

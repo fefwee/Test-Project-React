@@ -4,7 +4,7 @@ import { Aside } from './components/Aside/Aside';
 import { Routing } from './Routing/Routing';
 
 
-export const App = () => {
+export const App:React.FC = () => {
     
     return(
         <div className={style.wrapper}>

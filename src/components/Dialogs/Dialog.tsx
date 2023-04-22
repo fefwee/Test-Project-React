@@ -3,7 +3,7 @@ import style from './Dialog.module.css'
 import { DialogMessages } from "./DialogMessage/DialogMessages";
 import { DialogUsers } from "./DialogUsers/DialogUsers";
 
-export const Dialog = () =>{
+export const Dialog:React.FC = () =>{
 
 
 

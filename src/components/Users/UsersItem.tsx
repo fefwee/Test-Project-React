@@ -8,7 +8,7 @@ interface UserItemProps {
     status:string
     followed:boolean
 }
-export const UserItem:React.FunctionComponent<UserItemProps> = ({id,name,status,followed}) => {
+export const UserItem:React.FC<UserItemProps> = ({id,name,status,followed}) => {
 
     const dispatch = useDispatch()
 

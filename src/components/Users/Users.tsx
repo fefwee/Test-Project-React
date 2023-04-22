@@ -5,7 +5,7 @@ import { useAppSelector } from "../hook/hook";
 
 
 
-export const Users = () => {
+export const Users:React.FC = () => {
 
     const users = useAppSelector((state) => state.users.users)
     const userPost = users.map(u => <UserItem 

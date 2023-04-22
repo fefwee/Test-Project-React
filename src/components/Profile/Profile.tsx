@@ -5,7 +5,7 @@ import { MyPost } from "../MyPost/MyPost";
 import style from './Main.module.css'
 import { Post } from "../MyPost/Post/Post";
 
-export const Profile = () =>{
+export const Profile:React.FC = () =>{
 
    
      return (

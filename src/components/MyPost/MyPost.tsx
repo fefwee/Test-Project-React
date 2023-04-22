@@ -5,7 +5,7 @@ import { addPost} from "../../redux/Features/profilePage/profileSlice";
 import { useState } from "react";
 
 
-export const MyPost = () =>{
+export const MyPost:React.FC= () =>{
 
     const dispatch = useAppDispatch()
 

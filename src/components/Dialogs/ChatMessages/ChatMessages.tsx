@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { addTextMessage } from '../../../redux/Features/dialogPage/dialogPageSlice';
 import { ChatItemMessage } from './ChatItemMessage';
 
-export const ChatMessages = () => {
+export const ChatMessages:React.FC = () => {
 
     const dispatch = useAppDispatch()
 

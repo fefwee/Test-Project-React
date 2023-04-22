@@ -7,7 +7,7 @@ import { Users } from '../components/Users/Users'
 import { News } from '../components/News/News'
 
 
-export const Routing = () => {
+export const Routing:React.FC = () => {
     return (
         <>
             <Routes>

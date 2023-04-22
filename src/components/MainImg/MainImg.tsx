@@ -3,7 +3,7 @@ import style from './MainImg.module.css'
 import log from '../Header/logo_header.png'
 
 
-export const MainImg = () =>{
+export const MainImg:React.FC = () =>{
 
     return(
        <div className={style.back_img}>

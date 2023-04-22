@@ -3,7 +3,7 @@ import logo from  './logo_header.png';
 import style from './Header.module.css'
 
 
-export const Header = () =>{
+export const Header:React.FC = () =>{
 
     return(
         <div className={style.header}>
