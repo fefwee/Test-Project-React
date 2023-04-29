@@ -1,30 +1,55 @@
-import { useDispatch } from "react-redux"
-import { follow,unfollow } from "../../redux/Features/Users/userSlice"
+import { useAppDispatch } from "../hook/hook"
+import { follow, unfollow } from "../../redux/Features/Users/userSlice"
 
 
+interface photosUser {
+    small:null
+    large:null
+}
 interface UserItemProps {
-    id:number
     name:string
-    status:string
+    id:number
+    uniqueUrlName:null
+    photos?: photosUser
+    status:null
     followed:boolean
+
 }
-export const UserItem:React.FC<UserItemProps> = ({id,name,status,followed}) => {
+export const UserItem: React.FC<UserItemProps> =
+    ({ id, name, uniqueUrlName,followed,photos }) => {
 
-    const dispatch = useDispatch()
 
-    const followUser = ()=>{
-        dispatch(follow(id))
+        const dispatch = useAppDispatch();
+
+        const followUser = () => {
+            dispatch(follow(id))
+        }
+        const unfollowUser = () => {
+            dispatch(unfollow(id))
+        }  
+
+
+
+
+
+
+
+        return (
+            <div style={{
+                margin: '10px', display: 'flex', justifyContent: 'space-between'
+                , borderRadius: '10px', border: '1px solid gray', padding: '10px', width: '90%'
+            }}>
+                <div>
+                    {<div>{followed ? <button onClick={followUser}>follow</button>
+                        : <button onClick={unfollowUser}>unfollow</button>}</div>}
+                </div>
+                <div>
+                    <h1>{name}</h1>
+                    <p>{uniqueUrlName}</p>
+                    <p>{followed}</p>
+
+                </div>
+
+            </div>
+        )
     }
-    const unfollowUser = () => {
-        dispatch(unfollow(id))
-    } 
- 
-
-
-    return (
-        <div>
-            <h1>{id} {name} {status}</h1>
-            {followed ? <button onClick={followUser}>follow</button>:<button onClick={unfollowUser}>unfollow</button>}
-        </div>
-    )
-}

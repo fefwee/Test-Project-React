@@ -5,7 +5,7 @@ interface SidePostText {
     users:string
 }
 
-export const SidebarPost:React.FunctionComponent<SidePostText> = ({users}) =>{
+export const SidebarPost:React.FC<SidePostText> = ({users}) =>{
     return (
         <div>
             <p><img src={imgPost} alt="" style={{width:'50px'}}/>{users}</p>

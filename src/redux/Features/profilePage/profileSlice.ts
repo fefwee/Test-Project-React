@@ -16,9 +16,9 @@ export const profileSlice = createSlice({
     name:'profileSlice',
     initialState,
     reducers:{
-        addPost: (state,action:PayloadAction<string>) => {
+        addPost: (state,action:PayloadAction<string>,id?:string) => {
             const post = {
-                id:1,
+                id:Date.now(),
                 message:action.payload
             }
             state.profilePage.push(post)
