@@ -1,5 +1,5 @@
 import { useAppDispatch } from "../hook/hook"
-import { follow, unfollow } from "../../redux/Features/Users/userSlice"
+import { follow,unfollow } from "../../redux/Features/Users/userSlice"
 
 
 interface photosUser {
@@ -26,27 +26,22 @@ export const UserItem: React.FC<UserItemProps> =
         }
         const unfollowUser = () => {
             dispatch(unfollow(id))
-        }  
-
-
-
-
-
-
+        }   
 
         return (
             <div style={{
                 margin: '10px', display: 'flex', justifyContent: 'space-between'
                 , borderRadius: '10px', border: '1px solid gray', padding: '10px', width: '90%'
             }}>
-                <div>
-                    {<div>{followed ? <button onClick={followUser}>follow</button>
-                        : <button onClick={unfollowUser}>unfollow</button>}</div>}
-                </div>
+                { <div>
+                    {<div>{followed ? <button  onClick={followUser} >follow</button>
+                        : <button onClick={unfollowUser} >unfollow</button>}</div>}
+                </div> }
                 <div>
                     <h1>{name}</h1>
                     <p>{uniqueUrlName}</p>
                     <p>{followed}</p>
+                    <p>{id}</p>
 
                 </div>
 

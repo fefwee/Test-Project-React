@@ -1,10 +1,6 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit"
 
-/* { id: 1, logo:'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg', name: 'John', status: 'status', followed: false, location: { country: 'russia', city: 'moscow' } },
-        { id: 2, logo:'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg', name: 'William', status: 'status', followed: true, location: { country: 'usa', city: 'moscow' } },
-        { id: 3, logo:'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg', name: 'Jack', status: 'status', followed: true, location: { country: 'canada', city: 'moscow' } },
-        { id: 4, logo:'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg', name: 'Solo', status: 'status', followed: false, location: { country: 'mexico', city: 'moscow' } },
- */
+
 interface photosUser {
     small:null
     large:null
@@ -44,10 +40,12 @@ export const fetchGetUsers = createAsyncThunk<usersArr[],undefined,{rejectValue:
         const data = await response.json()
        
 
-        return data
+        return data.items
           
     }
 )
+
+
 
 
 
@@ -55,7 +53,7 @@ export const userSlice= createSlice({
     name: 'users',
     initialState,
     reducers: {
-         follow: (state, actions) => {
+        follow: (state, actions) => {
             state.users.map(u => {
                 if (u.id === actions.payload) {
                     u.followed = false
@@ -87,7 +85,7 @@ export const userSlice= createSlice({
 
 )
 
-export const { follow, unfollow } = userSlice.actions 
+ export const { follow, unfollow } = userSlice.actions  
 export default userSlice.reducer
 
 
