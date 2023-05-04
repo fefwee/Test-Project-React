@@ -2,13 +2,14 @@ import React from "react";
 import imgPost from '../Dialogs/ChatMessages/user.png'
 
 interface SidePostText {
-    users:string
+    name:string
 }
 
-export const SidebarPost:React.FC<SidePostText> = ({users}) =>{
+export const SidebarPost:React.FC<SidePostText> = ({name}) =>{
+
     return (
-        <div>
-            <p><img src={imgPost} alt="" style={{width:'50px'}}/>{users}</p>
+        <div style={{width:'100%',overflowX:'hidden'}}>
+            <p><img src={imgPost} alt="" style={{width:'50px'}}/>{name}</p>
         </div>
     )
 }

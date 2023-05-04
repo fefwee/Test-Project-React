@@ -10,12 +10,12 @@ import { useAppSelector } from "../hook/hook";
 
 export const Users: React.FC = () => {
 
-    const dispatch = useAppDispatch();
+ const dispatch = useAppDispatch();
 
 
     useEffect(() => {
         dispatch(fetchGetUsers());
-    }, [dispatch])
+    }, [dispatch])  
     const users = useAppSelector((state) => state.users.users)
     
     

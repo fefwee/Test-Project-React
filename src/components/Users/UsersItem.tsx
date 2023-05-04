@@ -16,7 +16,7 @@ interface UserItemProps {
 
 }
 export const UserItem: React.FC<UserItemProps> =
-    ({ id, name, uniqueUrlName,followed,photos }) => {
+    ({ id, name, uniqueUrlName,followed }) => {
 
 
         const dispatch = useAppDispatch();
