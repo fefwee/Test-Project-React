@@ -1,5 +1,5 @@
 import { useAppDispatch } from "../hook/hook"
-import { follow,unfollow } from "../../redux/Features/Users/userSlice"
+import {  follow,unfollow } from "../../redux/Features/Users/userSlice"
 
 
 interface photosUser {
@@ -13,11 +13,11 @@ interface UserItemProps {
     photos?: photosUser
     status:null
     followed:boolean
+   
 
 }
 export const UserItem: React.FC<UserItemProps> =
-    ({ id, name, uniqueUrlName,followed }) => {
-
+    ({ id, name, uniqueUrlName,followed}) => {
 
         const dispatch = useAppDispatch();
 
@@ -29,6 +29,7 @@ export const UserItem: React.FC<UserItemProps> =
         }   
 
         return (
+            <>
             <div style={{
                 margin: '10px', display: 'flex', justifyContent: 'space-between'
                 , borderRadius: '10px', border: '1px solid gray', padding: '10px', width: '90%'
@@ -46,5 +47,6 @@ export const UserItem: React.FC<UserItemProps> =
                 </div>
 
             </div>
+            </>
         )
     }

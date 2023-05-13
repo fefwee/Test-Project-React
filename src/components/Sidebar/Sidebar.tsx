@@ -26,7 +26,7 @@ export const Sidebar:React.FC = () =>{
     return (
         <div>
             <p>Friends</p>
-            <div style = {{}}>{user}</div>
+            <div>{user}</div>
         </div>
     )
 }

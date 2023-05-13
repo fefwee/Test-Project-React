@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
+import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit"
 
 
 interface photosUser {
@@ -16,22 +16,28 @@ interface usersArr {
 
 interface usersState {
     users: usersArr[]
-    loading: boolean
     error: null | string
+    pageSize:number
+    totalUsersCount:number
+    currentPage:number
+    isLoader:boolean
 }
 
 
 const initialState: usersState = {
     users: [],
-    loading: false,
-    error: null
+    error: null,
+    pageSize:1,
+    totalUsersCount:10,
+    currentPage:1,
+    isLoader:true
 }
 
 
 export const fetchGetUsers = createAsyncThunk<usersArr[], undefined, { rejectValue: string }>(
     'users/fetchGetUsers',
     async function (_, { rejectWithValue }) {
-        const response = await fetch('https://social-network.samuraijs.com/api/1.0/users')
+        const response = await fetch(`https://social-network.samuraijs.com/api/1.0/users?count = 10`)
 
         if (!response.ok) {
             return rejectWithValue('server down')
@@ -44,6 +50,7 @@ export const fetchGetUsers = createAsyncThunk<usersArr[], undefined, { rejectVal
 
     }
 )
+
 
 
 
@@ -65,18 +72,20 @@ export const userSlice = createSlice({
                     u.followed = true
                 }
             })
-        }
+        },
     },
+   
     extraReducers: (builder) => {
         builder.
             addCase(fetchGetUsers.pending, (state) => {
-                state.loading = true
                 state.error = null
+                state.isLoader = true
             })
             .addCase(fetchGetUsers.fulfilled, (state, action) => {
-                state.loading = false
+                state.isLoader = false
                 state.users = action.payload
             })
+    
          
     }
 
